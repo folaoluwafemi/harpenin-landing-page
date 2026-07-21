@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 235 235 235; /* Light grey #EBEBEB */
+  --foreground: 23 23 23;    /* Dark grey/black */
+  --accent: 255 196 0;       /* Harpenin Yellow */
+  --muted: 107 114 128;      /* Grey text */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 23 23 23;
+    --foreground: 255 255 255;
+    --accent: 255 196 0;
+    --muted: 156 163 175;
+  }
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  font-family: var(--font-manrope), sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
